@@ -13,8 +13,10 @@ class CarsController {
         if($_POST['automatique']==on){
             $boite=1;
         }
-
+        //*****************************************************
         // todo fonction upload avec un return de  l'unique id
+        //*****************************************************
+
 
         $car = new Cars($_POST['marque'],$_POST['modele'],$_POST['energie'],$boite);
         $carsManager=new CarsManager();
@@ -43,5 +45,8 @@ class CarsController {
         header('Location: index.php');
 
     }
+
+
+
 
 }

@@ -35,7 +35,7 @@
 
             ?>
 
-<?php echo           '<td><img src="" alt="photo de '.$car->getMarque().' '.$car->getModele().'"></td>'; ?>
+<?php echo           '<td><img width="100 px" alt="photo de '.$car->getMarque().' '.$car->getModele().'"></td>'; ?>
 
         </tr>
 
