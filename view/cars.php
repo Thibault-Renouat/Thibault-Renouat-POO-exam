@@ -1,7 +1,7 @@
 <h1>Toute les voitures</h1>
 <hr><br>
 
-<a href="index.php?controller=raviole&action=add">
+<a href="index.php?controller=cars&action=add">
     <button type="button" class="btn btn-success">Ajouter une voiture</button>
 </a>
 
@@ -18,15 +18,6 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>automatique</td>
-        <td>photo</td>
-        <td>actions</td>
-    </tr>
 
     <?php
     /* @var $car Cars */
@@ -37,11 +28,18 @@
                     <td>'.$car->getId().'</td>
                     <td>'.$car->getMarque().'</td>
                     <td>'.$car->getModele().'</td>
-                    <td>'.$car->getEnergie().'</td>
-                    <td>'.$car->getAutomatique().'</td>
-                    <td>'.$car->getImage().'</td>
+                    <td>'.$car->getEnergie().'</td>'; ?>
+
+        <?php
+        if ($car->getAutomatique()==1){
+
+            echo'<td>Oui</td>';
+        }else  echo'<td>Non</td>';
+
+        ?>
+
+        <?php echo           '<td>'.$car->getImage().'</td>
                     <td><a href="index.php?controller=cars&action=detail&id='.$car->getId().'">Détail</a>
-                        <a href="index.php?controller=cars&action=update&id='.$car->getId().'">Modifier</a>
                         <a href="index.php?controller=cars&action=delete&id='.$car->getId().'" style="color: red">Supprimer</a>
                     </td>
                 </tr>';
