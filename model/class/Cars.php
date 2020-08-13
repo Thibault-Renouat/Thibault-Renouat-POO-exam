@@ -8,6 +8,18 @@ class Cars
     private $energie;
     private $automatique;
     private $image;
+    private $id;
+
+    public function __construct($marque, $modele, $energie, $automatique=false, $image=null,$id=null)
+    {
+        $this->marque = $marque;
+        $this->modele = $modele;
+        $this->energie = $energie;
+        $this->automatique = $automatique;
+        $this->image = $image;
+        $this->id= $id;
+    }
+
 
     /**
      * @return mixed
@@ -97,13 +109,21 @@ class Cars
      * @param $automatique
      * @param $image
      */
-    public function __construct($marque, $modele, $energie, $automatique, $image)
+
+    /**
+     * @return null
+     */
+    public function getId()
     {
-        $this->marque = $marque;
-        $this->modele = $modele;
-        $this->energie = $energie;
-        $this->automatique = $automatique;
-        $this->image = $image;
+        return $this->id;
+    }
+
+    /**
+     * @param null $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
     }
 
 
