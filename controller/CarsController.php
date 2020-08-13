@@ -23,4 +23,25 @@ class CarsController {
 
     }
 
+    public function CarDetail($id)
+    {
+        $carsManager= new CarsManager();
+        $car=$carsManager->getOneById($id);
+
+//        var_dump($car); die();
+
+        require 'view/carDetail.php';
+
+    }
+
+    public function deleteCar($id)
+    {
+
+        $carsManager= new CarsManager();
+        $carsManager->delete($id);
+
+        header('Location: index.php');
+
+    }
+
 }

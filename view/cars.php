@@ -38,7 +38,7 @@
 
         ?>
 
-        <?php echo           '<td>'.$car->getImage().'</td>
+        <?php echo           '<td><img src="" alt="photo de '.$car->getMarque().' '.$car->getModele().'"></td>
                     <td><a href="index.php?controller=cars&action=detail&id='.$car->getId().'">Détail</a>
                         <a href="index.php?controller=cars&action=delete&id='.$car->getId().'" style="color: red">Supprimer</a>
                     </td>

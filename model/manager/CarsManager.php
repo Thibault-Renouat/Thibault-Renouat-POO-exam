@@ -45,4 +45,27 @@ class CarsManager extends DbManager
 
 
     }
+
+    public function getOneById($id)
+    {
+        $query = $this->bdd->prepare("SELECT * FROM car WHERE id=?");
+        $query->bindParam(1, $id);
+        $query->execute();
+        $res = $query->fetch();
+
+        $cars= new Cars($res['marque'], $res['modele'], $res['energie'], $res['est_automatique'], $res['image'], $res['id']);
+
+
+        return $cars;
+    }
+
+    public function delete($id)
+    {
+
+        $query = $this->bdd->prepare('DELETE FROM car where id = ?');
+        $query->bindParam(1,$id);
+        $query->execute();
+
+
+    }
 }

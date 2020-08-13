@@ -3,15 +3,15 @@
 <form action="index.php?controller=cars&action=addBdd" method="post" enctype="multipart/form-data">
     <div class="form-group">
         <label for="marque">Marque de la voiture</label>
-        <input type="text" class="form-control" name="marque" id="marque" >
+        <input type="text" class="form-control" name="marque" id="marque" required>
     </div>
     <div class="form-group">
         <label for="modele">Modèle de la voiture</label>
-        <input type="text" class="form-control" name="modele" id="modele" >
+        <input type="text" class="form-control" name="modele" id="modele" required>
     </div>
     <div class="form-group">
         <label for="energie">Sélectionnez l'énergie de la voiture</label>
-        <select class="form-control" id="energie" name="energie">
+        <select class="form-control" id="energie" name="energie" required>
             <option>Essence</option>
             <option>Diesel</option>
             <option>Electrique</option>
@@ -20,7 +20,7 @@
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <div class="input-group-text">
-                    <input type="checkbox" aria-label="Checkbox for following text input" name="automatique">
+                    <input type="checkbox" aria-label="Checkbox for following text input" name="automatique" >
                 </div>
             </div>
             <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="Est Automatique">
@@ -43,7 +43,7 @@
 </form>
 
 <?php
-
+/*
 var_dump($_POST);
 echo '<hr>';
-var_dump($_FILES);
+var_dump($_FILES);*/

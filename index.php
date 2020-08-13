@@ -15,6 +15,15 @@ if(empty($_GET)) {
 
     $carsController->addCarInBdd();
 
+}elseif (($_GET['controller']==='cars'  AND  $_GET['action']=== 'detail' AND isset($_GET['id']))){
+
+    $carsController->CarDetail($_GET['id']);
+
+}elseif (($_GET['controller']==='cars'  AND  $_GET['action']=== 'delete' AND isset($_GET['id']))){
+
+    $carsController->deleteCar($_GET['id']);
+
+
 }else {
 
 
